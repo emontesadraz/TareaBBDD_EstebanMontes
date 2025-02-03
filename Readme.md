@@ -104,3 +104,32 @@ ORDER BY date
 ```
 Y nos dará como resultado la siguiente tabla
 ![imagen 10](img/foto10.png)
+
+## APARTADO 6 :sunglasses:
+**Enunciado** :point_down:
+Utilizando las tablas de odoo, obtén un listado de empresas clientes, a las que se les
+ha emitido más de dos facturas de venta (solo venta) confirmadas, mostrando los
+siguientes datos:
+- Nombre de la empresa
+- Número de facturas
+- Total facturado SIN IMPUESTOS
+
+---
+
+Para resolver este ejercicio, pondremos la siguiente consulta:
+```SQL
+SELECT 
+    res_partner.name,
+    COUNT(account_move.id),
+    SUM(account_move.amount_untaxed)
+FROM account_move
+JOIN res_partner ON account_move.partner_id = res_partner.id
+WHERE account_move.move_type = 'out_invoice' 
+AND account_move.state = 'posted'  
+GROUP BY res_partner.name
+HAVING COUNT(account_move.id) > 2  
+ORDER BY SUM(account_move.amount_untaxed) DESC;
+```
+
+Y nos dará como resultado la siguiente tabla
+![imagen 11](img/foto11.png)
