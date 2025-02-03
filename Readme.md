@@ -153,3 +153,29 @@ Así es como se vería antes de hacer el ```UPDATE```
 
 Así es como se vería después de hacer el ```UPDATE```
 ![imagen 11](img/foto14.png)
+
+## APARTADO 8 :kissing_smiling_eyes:
+**Enunciado** :point_down:
+
+La empresa Ready Mat ha hecho un ERE y ha despedido a todos los empleados
+que tenías como contacto. Crea una sentencia que elimine todos los contactos
+pertenecientes a la empresa “Ready Mat”, pero mantén la empresa. Añade una
+captura de pantalla de la sección de contactos de odoo con Ready Mat antes y
+después.
+
+---
+
+Para hacer este apartado, vamos utilizar la instrucción ```DELETE```. Pondremos la siguiente consulta:
+```SQL
+DELETE FROM res_partner
+WHERE commercial_company_name = 'Ready Mat'
+AND is_company = false
+```
+
+Aquí podemos ver como es antes de hacer el ```DELETE```
+![imagen 11](img/foto15.png)
+
+Aquí podemos ver como es después de hacer el ```DELETE```
+![imagen 11](img/foto16.png)
+
+Y hasta aquí la tarea de BBDD, espero que haya quedado todo bien explicado y que se haya entendido todo. :smile:
