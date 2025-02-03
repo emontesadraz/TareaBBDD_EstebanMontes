@@ -63,3 +63,24 @@ EmpresasFCT
 
 ![imagen 7](img/foto7.png)
 
+## APARTADO 4 :stuck_out_tongue_closed_eyes:
+**Enunciado** :point_down:
+
+Realiza una consulta que permita obtener un listado de todos los contactos de
+Odoo (no empresas) con la siguiente información:
+- Nombre
+- Cuya ciudad sea Tracy
+- Nombre comercial de la empresa
+ordenados alfabéticamente por el nombre comercial de la empresa.
+ 
+---
+
+En herrmientas de consulta pondremos la siguiente consulta
+```SQL
+SELECT name,commercial_company_name,city FROM public."res_partner"
+WHERE city = 'Tracy'
+```
+![imagen 8](img/foto8.png)
+
+Nos tendrá que salir de resultado la siguiente tabla
+![imagen 9](img/foto9.png)
