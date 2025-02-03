@@ -37,4 +37,29 @@ Haremos click en el apartado que pone ```Herramientas de consulta```, que está 
 
 Al darle click vamos a añadirle las siguientes columnas de la siguiente manera:
 
-![imagen5](img/foto4.png).
+![imagen5](img/foto4.png)
+
+## APARTADO 3 :clown_face:
+
+**Enunciado** :point_down:
+
+Realiza una consulta donde se muestren todos los datos de la tabla EmpresasFCT
+ordenados por fechaContacto, de modo que en la primera fila salga el que tenga la
+fecha más reciente.
+
+---
+
+Para hacer esta consulta, como en el apartado anterior,
+le damos a ```Herramienta de consulta``` y añadimos la siguiente línea de consulta
+```SQL
+SELECT * FROM public."EmpresasFCT"
+```
+
+Lo ponemos como en la imagen y le damos a ```Execute Script```
+![imagen 6](img/foto6.png)
+
+Como resultado nos tendría que salir todo lo que haya en el la tabla de
+EmpresasFCT
+
+![imagen 7](img/foto7.png)
+
