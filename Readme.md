@@ -23,3 +23,16 @@ Aquí seleccionaremos la opción ```Crear``` y le daremos a ```Tabla...```. Nos 
 ![imagen2](img/foto1.png)
 
 Para añadir una columna nueva tenemos que darle al ```+``` que está en la parte superior derecha de la ventana. Una vez añadidas todas las columnas, le daremos a ```Guardar``` y ya tendremos nuestra tabla creada.
+
+## APARTADO 2 :neutral_face:
+**Enunciado** :point_down:
+
+Inserta 5 registros inventados en la tabla a través de una sentencia SQL.
+
+---
+
+Haremos click en el apartado que pone ```Herramientas de consulta```, que está en la esquina superior izquierda
+
+![imagen4](img/foto5.png).
+
+Al darle click vamos 
