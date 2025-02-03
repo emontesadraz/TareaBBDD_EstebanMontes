@@ -133,3 +133,23 @@ ORDER BY SUM(account_move.amount_untaxed) DESC;
 
 Y nos dará como resultado la siguiente tabla
 ![imagen 11](img/foto11.png)
+
+## APARTADO 7 :open_mouth:
+**Enunciado** :point_down:
+Crea una sentencia que actualice el correo de los contactos cuyo dominio es
+@bilbao.example.com a @bilbao.bizkaia.neus
+
+---
+
+Pondremos esta consulta:
+```SQL
+UPDATE res_partner 
+SET email = '@bilbao.bizkaia.eus'
+WHERE email LIKE '%@bilbao.example.com'
+```
+
+Así es como se vería antes de hacer el ```UPDATE```
+![imagen 11](img/foto12.png)
+
+Así es como se vería después de hacer el ```UPDATE```
+![imagen 11](img/foto14.png)
