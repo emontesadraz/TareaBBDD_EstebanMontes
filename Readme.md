@@ -35,4 +35,6 @@ Haremos click en el apartado que pone ```Herramientas de consulta```, que está 
 
 ![imagen4](img/foto5.png).
 
-Al darle click vamos 
+Al darle click vamos a añadirle las siguientes columnas de la siguiente manera:
+
+![imagen5](img/foto4.png).
