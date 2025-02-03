@@ -80,7 +80,27 @@ En herrmientas de consulta pondremos la siguiente consulta
 SELECT name,commercial_company_name,city FROM public."res_partner"
 WHERE city = 'Tracy'
 ```
-![imagen 8](img/foto8.png)
+![imagen 8](img/foto9.png)
 
 Nos tendrá que salir de resultado la siguiente tabla
-![imagen 9](img/foto9.png)
+![imagen 9](img/foto8.png)
+
+## APARTADO 5 :scream:
+**Enunciado** :point_down:
+Utilizando las tablas de odoo, obtén un listado de empresas proveedoras, que han
+emitido algún reembolso (facturas rectificativas de proveedor)
+- Nombre de la empresa
+- Número de factura
+- Fecha de la factura
+- Total factura SIN impuestos
+Ordenadas por fecha de factura de modo que la primera sea la más reciente.
+
+---
+
+Haremos esta consulta:
+```SQL
+SELECT name,amount_untaxed,date FROM public."account_move"
+ORDER BY date
+```
+Y nos dará como resultado la siguiente tabla
+![imagen 10](img/foto10.png)
