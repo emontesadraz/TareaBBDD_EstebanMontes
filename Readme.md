@@ -99,8 +99,12 @@ Ordenadas por fecha de factura de modo que la primera sea la más reciente.
 
 Haremos esta consulta:
 ```SQL
-SELECT name,amount_untaxed,date FROM public."account_move"
-ORDER BY date
+SELECT res_partner.name,account_move.name, account_move.amount_untaxed, account_move.date
+FROM account_move 
+JOIN res_partner 
+ON account_move.partner_id = res_partner.id
+WHERE account_move.move_type = 'in_refund'
+ORDER BY account_move.invoice_date DESC;
 ```
 Y nos dará como resultado la siguiente tabla
 ![imagen 10](img/foto10.png)
@@ -144,8 +148,8 @@ Crea una sentencia que actualice el correo de los contactos cuyo dominio es
 Pondremos esta consulta:
 ```SQL
 UPDATE res_partner 
-SET email = '@bilbao.bizkaia.eus'
-WHERE email LIKE '%@bilbao.example.com'
+SET email = replace("email", '@bilbao.example.com', '@bilbao.bizkaia.eus')
+WHERE email = '%@bilbao.example.com'
 ```
 
 Así es como se vería antes de hacer el ```UPDATE```
